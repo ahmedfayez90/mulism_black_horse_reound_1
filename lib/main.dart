@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muslim/core/constant.dart';
 import 'package:muslim/mvc/view/screens/landing_screen.dart';
+import 'package:muslim/mvc/view/screens/quran_details_screen.dart';
 import 'package:muslim/mvc/view/screens/quran_screen.dart';
 
 void main() {
@@ -20,16 +21,16 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           textTheme: const TextTheme(
             titleMedium: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: primaryColor,
-              height: 2
-            ),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: primaryColor,
+                height: 2),
           )),
       initialRoute: LandingScreen.name,
       routes: {
         LandingScreen.name: (c) => const LandingScreen(),
         QuranScreen.name: (c) => const QuranScreen(),
+        QuranDetailsScreen.routeName: (c) =>   QuranDetailsScreen()
       },
     );
   }
